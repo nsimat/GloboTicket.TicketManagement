@@ -8,11 +8,11 @@ namespace GloboTicket.TicketManagement.Application.Features.Events.Commands.Crea
 {
     public class CreateEventCommandValidator : AbstractValidator<CreateEventCommand>
     {
-        private readonly IEventRepository _eventRespository;
+        private readonly IEventRepository _eventRepository;
 
         public CreateEventCommandValidator(IEventRepository eventRepository)
         {
-            _eventRespository = eventRepository ?? throw new ArgumentNullException(nameof(eventRepository));
+            _eventRepository = eventRepository ?? throw new ArgumentNullException(nameof(eventRepository));
         }
 
         public CreateEventCommandValidator()
