@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using GloboTicket.TicketManagement.Application.Contracts.Persistence;
+﻿using GloboTicket.TicketManagement.Application.Contracts.Persistence;
 using GloboTicket.TicketManagement.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
