@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using GloboTicket.TicketManagement.Application.Contracts.Persistence;
+﻿using GloboTicket.TicketManagement.Application.Contracts.Persistence;
 using GloboTicket.TicketManagement.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -15,7 +12,7 @@ namespace GloboTicket.TicketManagement.Persistence
             IConfiguration configuration)
         {
             services.AddDbContext<GloboTicketDbContext>(options =>
-                options.UseSqlServer(configuration.GetConnectionString("GloboTicketManagementConnection")));
+                options.UseSqlServer(configuration.GetConnectionString("GloboTicketConnection")));
 
             services.AddScoped(typeof(IAsyncRepository<>), typeof(BaseRepository<>));
 

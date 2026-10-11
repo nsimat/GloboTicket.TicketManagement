@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using GloboTicket.TicketManagement.Application.Contracts.Infrastructure;
+﻿using GloboTicket.TicketManagement.Application.Contracts.Infrastructure;
 using GloboTicket.TicketManagement.Infrastructure.Mail;
 using Microsoft.Extensions.DependencyInjection;
 
