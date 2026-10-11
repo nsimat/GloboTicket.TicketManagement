@@ -6,6 +6,7 @@
     <Project Path="GloboTicket.TicketManagement.Domain/GloboTicket.TicketManagement.Domain.csproj" />
   </Folder>
   <Folder Name="/src/Infrastructure/">
+    <Project Path="GloboTicket.TicketManagement.Infrastructure/GloboTicket.TicketManagement.Infrastructure.csproj" Id="1fef8f4d-8ec6-4fa2-b5f9-8f36c524149b" />
     <Project Path="GloboTicket.TicketManagement.Persistence/GloboTicket.TicketManagement.Persistence.csproj" Id="dfc70b1d-219b-4816-84fd-b7b9d155f9a9" />
   </Folder>
   <Folder Name="/src/UI/" />
