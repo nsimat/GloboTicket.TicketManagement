@@ -17,9 +17,16 @@ namespace GloboTicket.TicketManagement.Application.Profiles
         {
             CreateMap<Event, EventListVm>().ReverseMap();
             CreateMap<Event, EventDetailVm>().ReverseMap();
-            CreateMap<Category, CategoryDto>().ReverseMap();
+            CreateMap<Category, CategoryDto>()
+                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.CategoryId))
+                .ReverseMap()
+                .ForMember(dest => dest.CategoryId, opt => opt.MapFrom(src => src.Id));
 
-            CreateMap<Category, CategoryListVm>().ReverseMap();
+            CreateMap<Category, CategoryListVm>()
+                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.CategoryId))
+                .ReverseMap()
+                .ForMember(dest => dest.CategoryId, opt => opt.MapFrom(src => src.Id));
+
             CreateMap<Category, CategoryEventListVm>().ReverseMap();
 
             CreateMap<Event, CreateEventCommand>().ReverseMap();
