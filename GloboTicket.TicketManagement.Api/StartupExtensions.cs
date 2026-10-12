@@ -8,7 +8,7 @@ namespace GloboTicket.TicketManagement.Api
     {
         public static WebApplicationBuilder ConfigureServices(this WebApplicationBuilder builder)
         {
-            builder.Services.AddApplicationServices();
+            builder.Services.AddApplicationServices(builder.Configuration);
             builder.Services.AddInfrastructureServices();
             builder.Services.AddPersistenceServices(builder.Configuration);
             builder.Services.AddControllers();
