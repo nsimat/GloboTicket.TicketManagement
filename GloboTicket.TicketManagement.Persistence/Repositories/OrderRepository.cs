@@ -10,7 +10,7 @@ namespace GloboTicket.TicketManagement.Persistence.Repositories
         {
         }
 
-        public async Task<List<Order>> GetOrdersForTaskMonth(DateTime date)
+        public async Task<List<Order>> GetOrdersForMonth(DateTime date)
         {
             return await _dbContext.Orders
                 .Where(x => x.OrderPlaced.Month == date.Month && x.OrderPlaced.Year == date.Year)
