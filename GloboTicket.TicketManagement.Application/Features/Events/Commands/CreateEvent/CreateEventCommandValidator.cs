@@ -13,10 +13,7 @@ namespace GloboTicket.TicketManagement.Application.Features.Events.Commands.Crea
         public CreateEventCommandValidator(IEventRepository eventRepository)
         {
             _eventRepository = eventRepository ?? throw new ArgumentNullException(nameof(eventRepository));
-        }
 
-        public CreateEventCommandValidator()
-        {
             RuleFor(e => e.Name)
                 .NotEmpty().WithMessage("{PropertyName} is required.")
                 .NotNull()

@@ -26,8 +26,6 @@ namespace GloboTicket.TicketManagement.Application.Features.Events.Commands.Upda
             _mapper.Map(request, eventToUpdate, typeof(UpdateEventCommand), typeof(Event));
 
             await _eventRepository.UpdateAsync(eventToUpdate);
-
-            throw new NotImplementedException();
         }
     }
 }
