@@ -21,7 +21,14 @@ namespace GloboTicket.TicketManagement.App.Profiles
             CreateMap<EventDetailViewModel, UpdateEventCommand>().ReverseMap();
 
             CreateMap<CategoryEventDto, EventNestedViewModel>().ReverseMap();
-            CreateMap<CategoryListVm, CategoryEventsViewModel>().ReverseMap();
+
+            CreateMap<CategoryDto, CategoryViewModel>().ReverseMap();
+            CreateMap<CategoryListVm, CategoryViewModel>().ReverseMap();
+            CreateMap<CategoryEventListVm, CategoryEventsViewModel>().ReverseMap();
+            CreateMap<CreateCategoryCommand, CategoryViewModel>().ReverseMap();
+            CreateMap<CreateCategoryDto, CategoryViewModel>().ReverseMap();
+
+            CreateMap<OrdersForMonthDto, OrdersForMonthListViewModel>().ReverseMap();
         }
     }
 }
