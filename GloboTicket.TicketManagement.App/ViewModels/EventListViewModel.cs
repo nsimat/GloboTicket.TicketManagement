@@ -1,5 +1,8 @@
 ﻿namespace GloboTicket.TicketManagement.App.ViewModels
 {
+    /// <summary>
+    /// Represents an event in a list.
+    /// </summary>
     public class EventListViewModel
     {
         public Guid EventId { get; set; }
