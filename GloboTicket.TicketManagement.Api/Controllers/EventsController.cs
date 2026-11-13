@@ -29,7 +29,7 @@ namespace GloboTicket.TicketManagement.Api.Controllers
         }
 
         [HttpGet("{id}", Name = "GetEventById")]
-        [ProducesResponseType(typeof(EventListVm), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(EventDetailVm), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
         public async Task<ActionResult<EventDetailVm>> GetEventById(Guid id)
         {

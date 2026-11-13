@@ -27,8 +27,8 @@ namespace GloboTicket.TicketManagement.Api.Controllers
         }
 
         [HttpGet("allwithevents", Name = "GetCategoriesWithEvents")]
-        [ProducesResponseType(typeof(List<CategoryListVm>), StatusCodes.Status200OK)]
-        public async Task<ActionResult<List<CategoryListVm>>> GetCategoriesWithEvents(bool includeHistory)
+        [ProducesResponseType(typeof(List<CategoryEventListVm>), StatusCodes.Status200OK)]
+        public async Task<ActionResult<List<CategoryEventListVm>>> GetCategoriesWithEvents(bool includeHistory)
         {
             GetCategoriesListWithEventsQuery getCategoriesListWithEventsQuery = new GetCategoriesListWithEventsQuery()
             {
