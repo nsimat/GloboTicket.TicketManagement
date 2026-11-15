@@ -11,6 +11,16 @@ namespace GloboTicket.TicketManagement.Api
             builder.Services.AddApplicationServices(builder.Configuration);
             builder.Services.AddInfrastructureServices();
             builder.Services.AddPersistenceServices(builder.Configuration);
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy(name: "MyBlazorPolicy",
+                    policy =>
+                    {
+                        policy.WithOrigins("https://localhost:7278") // L'URL exacte du front-end (sans slash à la fin)
+                            .AllowAnyHeader()
+                            .AllowAnyMethod();
+                    });
+            });
             builder.Services.AddControllers();
             builder.Services.AddOpenApi();
 
@@ -27,6 +37,7 @@ namespace GloboTicket.TicketManagement.Api
             }
 
             app.UseHttpsRedirection();
+            app.UseCors("MyBlazorPolicy");
             app.MapControllers();
 
             return app;
