@@ -1,39 +1,19 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="">GloboTicket.TicketManagement.App</a>
-        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+﻿<div class="sidebar">
+    <div class="menu list-group list-group-flush">
+        <NavLink class="list-group-item list-group-item-action" href="/" Match="NavLinkMatch.All">
+            <i class="bi bi-house-door-fill me-2" aria-hidden="true"></i> Home
+        </NavLink>
+        <NavLink class="list-group-item list-group-item-action" href="/eventoverview">
+            <i class="bi bi-calendar-event me-2" aria-hidden="true"></i> Events
+        </NavLink>
+        <NavLink class="list-group-item list-group-item-action" href="/categoryoverview">
+            <i class="bi bi-tags me-2" aria-hidden="true"></i> Categories
+        </NavLink>
+        <NavLink class="list-group-item list-group-item-action" href="/addcategory">
+            <i class="bi bi-plus-circle me-2" aria-hidden="true"></i> Add category
+        </NavLink>
+        <NavLink class="list-group-item list-group-item-action" href="/ticketsales">
+            <i class="bi bi-ticket-perforated me-2" aria-hidden="true"></i> Sales
+        </NavLink>
     </div>
 </div>
-
-<div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
-    <nav class="nav flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Counter
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="weather">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather
-            </NavLink>
-        </div>
-    </nav>
-</div>
-
-@code {
-    private bool collapseNavMenu = true;
-
-    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
-    {
-        collapseNavMenu = !collapseNavMenu;
-    }
-}
